@@ -17,6 +17,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -38,9 +39,10 @@ public class TextEditor extends JFrame implements ActionListener{
     {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("walmart vs code");
-        this.setSize(500,500);
+        this.setSize(500,570);
         this.setLayout(new FlowLayout());
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
 
         textArea = new JTextArea();
         textArea.setLineWrap(true);
@@ -183,6 +185,10 @@ public class TextEditor extends JFrame implements ActionListener{
         {
         	System.exit(0);
         }
+    }
+
+    public static void main(String[] args) {
+        new TextEditor();
     }
 }
 
